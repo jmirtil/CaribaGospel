@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.caribbagospel.caribbagospel.PlayStreams">
+    tools:context="com.caribagospel.caribagospel.PlayStreams">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/layout_container_buttons"
@@ -27,7 +27,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
-            android:text="Name"
+            android:text="Cariba"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/textView"
             app:layout_constraintHorizontal_bias="0.282"
@@ -39,7 +39,7 @@
             android:layout_width="71dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Name"
+            android:text="Cariba16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button20" />
 
@@ -49,7 +49,7 @@
             android:layout_height="24dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="20dp"
-            android:text="Name"
+            android:text="Cariba15"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView15"
             app:layout_constraintTop_toBottomOf="@+id/button17"
@@ -62,7 +62,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="Name"
+            android:text="Cariba14"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView14"
             app:layout_constraintStart_toEndOf="@+id/textView12"
@@ -74,7 +74,7 @@
             android:layout_height="24dp"
             android:layout_marginBottom="8dp"
             android:layout_marginStart="24dp"
-            android:text="Name"
+            android:text="Cariba13"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button9" />
@@ -84,7 +84,7 @@
             android:layout_width="71dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Name"
+            android:text="Cariba12"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button16" />
 
@@ -93,7 +93,7 @@
             android:layout_width="71dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Name"
+            android:text="Cariba11"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/button18" />
 
@@ -104,7 +104,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="Name"
+            android:text="Cariba10"
             app:layout_constraintBottom_toTopOf="@+id/button21"
             app:layout_constraintEnd_toStartOf="@+id/textView10"
             app:layout_constraintHorizontal_bias="0.642"
@@ -118,7 +118,7 @@
             android:layout_height="24dp"
             android:layout_marginBottom="8dp"
             android:layout_marginStart="24dp"
-            android:text="Name"
+            android:text="Cariba9"
             app:layout_constraintBottom_toTopOf="@+id/button9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button8"
@@ -129,7 +129,7 @@
             android:layout_width="71dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Name"
+            android:text="Cariba8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button15" />
 
@@ -138,7 +138,7 @@
             android:layout_width="71dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Name"
+            android:text="Cariba7"
             app:layout_constraintEnd_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/button19" />
 
@@ -148,7 +148,7 @@
             android:layout_height="24dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="Name"
+            android:text="Cariba6"
             app:layout_constraintEnd_toStartOf="@+id/textView6"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/button23" />
@@ -158,7 +158,7 @@
             android:layout_width="71dp"
             android:layout_height="24dp"
             android:layout_marginStart="24dp"
-            android:text="Name"
+            android:text="Cariba5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button7" />
 
@@ -168,7 +168,7 @@
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"
-            android:text="Name"
+            android:text="Cariba4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button6" />
 
@@ -178,7 +178,7 @@
             android:layout_height="24dp"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="8dp"
-            android:text="Name"
+            android:text="Cariba3"
             app:layout_constraintEnd_toStartOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/button4" />
 
@@ -188,7 +188,7 @@
             android:layout_height="21dp"
             android:layout_marginEnd="12dp"
             android:layout_marginTop="8dp"
-            android:text="Name"
+            android:text="Cariba2"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/button5" />
 

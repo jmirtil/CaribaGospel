@@ -1,4 +1,4 @@
-package com.caribbagospel.caribbagospel;
+package com.caribagospel.caribagospel;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ToggleButton;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -16,25 +17,6 @@ public class PlayStreams extends AppCompatActivity {
 
     protected MediaPlayer mp;
     protected boolean isPlaying;
-
-    protected String[] streams = {
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620",
-            "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620"
-    };
 
     protected Map<Integer, String> streamMap = new HashMap<>();
 
@@ -49,7 +31,6 @@ public class PlayStreams extends AppCompatActivity {
         for (int i = 0; i < layout.getChildCount(); i++) {
 
             View child = layout.getChildAt(i);
-            final int index = i;
             if (child instanceof Button) {
                 final Button button = (Button) child;
                 button.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +41,7 @@ public class PlayStreams extends AppCompatActivity {
             }
         }
 
-        final Button play = findViewById(R.id.playButton);
+        final ToggleButton play = findViewById(R.id.playButton);
         play.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 resumeStream(play);
@@ -70,7 +51,7 @@ public class PlayStreams extends AppCompatActivity {
         Button stop = findViewById(R.id.stopButton);
         stop.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                stopStream();
+                stopStream(play);
             }
         });
 
@@ -83,6 +64,9 @@ public class PlayStreams extends AppCompatActivity {
         });
     }
 
+    /**
+     * Setup links to the stream for each button in the app.
+     */
     protected void setUpStream(){
         streamMap.put(R.id.button, "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620");
         streamMap.put(R.id.button4, "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620");
@@ -102,24 +86,32 @@ public class PlayStreams extends AppCompatActivity {
         streamMap.put(R.id.button23, "https://samcloud.spacial.com/api/listen?sid=92412&m=sc&rid=166620");
     }
 
-    public void resumeStream(Button playButton) {
+    /**
+     * This is the action handler for the play button. It toggles between play and pause.
+     * @param playButton
+     */
+    public void resumeStream(ToggleButton playButton) {
         if (mp != null) {
             if(!isPlaying)
             {
                 mp.start();
                 isPlaying = true;
+                playButton.setChecked(true);
             }
             else
             {
                 mp.pause();
                 isPlaying = false;
+                playButton.setChecked(false);
             }
         }
     }
 
-    public void stopStream() {
+    public void stopStream(ToggleButton playButton) {
         if (mp != null) {
             mp.pause();
+            isPlaying = false;
+            playButton.setChecked(false);
         }
     }
 
@@ -128,6 +120,7 @@ public class PlayStreams extends AppCompatActivity {
             mp.stop();
             mp.release();
             mp = null;
+            isPlaying = false;
         }
         closeApp();
     }

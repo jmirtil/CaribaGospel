@@ -1,4 +1,4 @@
-package com.caribbagospel.caribbagospel;
+package com.caribagospel.caribagospel;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

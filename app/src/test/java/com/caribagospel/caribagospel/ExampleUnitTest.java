@@ -1,4 +1,4 @@
-package com.caribbagospel.caribbagospel;
+package com.caribagospel.caribagospel;
 
 import org.junit.Test;
 
